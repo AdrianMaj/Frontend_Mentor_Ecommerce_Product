@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 1.2em;
+}
+.header__logo {
+  margin-left: 1em;
+}
+.header__avatar {
+  margin-left: 1em;
+  width: 1.5em;
+}
+.header__cart-icon {
+  margin-left: auto;
+}
+.header__cart-icon, .header__avatar, .header__logo, .header__hamburger {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  z-index: 0;
+  transition: left 0.6s;
+}
+
+.shadow {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.664);
+  z-index: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  background-color: #fff;
+  padding: 1em 1em;
+  width: 65%;
+  z-index: 0;
+}
+.nav__list {
+  list-style: none;
+}
+.nav__list-element {
+  margin-bottom: 1.5em;
+  font-weight: 700;
+}
+.nav__list-element a {
+  text-decoration: none;
+  color: black;
+}
+.nav__close-btn {
+  margin-bottom: 2.5em;
+  cursor: pointer;
+}
+
+.active {
+  left: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */
