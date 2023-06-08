@@ -12,5 +12,14 @@ const closeMenu = () => {
 	shadow.style.display = 'none'
 }
 
+$(document).ready(function () {
+	$('.gallery').slick({
+		prevArrow:
+			'<button type="button" class="slick-prev"><img src="./img/icon-previous.svg" alt="Previous photo arrow button"></button>',
+		nextArrow:
+			'<button type="button" class="slick-next"><img src="./img/icon-next.svg" alt="Next photo arrow button"></button>',
+	})
+})
+
 hamburgerBtn.addEventListener('click', openMenu)
 closeBtn.addEventListener('click', closeMenu)
