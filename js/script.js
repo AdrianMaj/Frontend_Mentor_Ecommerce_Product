@@ -3,10 +3,22 @@ const menu = document.querySelector('.menu')
 const closeBtn = document.querySelector('.nav__close-btn')
 const shadow = document.querySelector('.shadow')
 
+//pricing
+const price = 125
+const productPrice = document.querySelector('.product__price')
+productPrice.textContent = `$${price.toFixed(2)}`
 //quantity consts
 const addQuantityBtn = document.querySelector('.quantity__btn--add')
 const subtractQuantityBtn = document.querySelector('.quantity__btn--subtract')
 const quantityInput = document.querySelector('.quantity__number')
+//basket and addToCart consts
+const basketIcon = document.querySelector('.header__cart-icon')
+const cartMenu = document.querySelector('.cart')
+
+const addToCartBtn = document.querySelector('.info__add-to-cart-btn')
+const productQuantity = document.querySelectorAll('.product__quantity')
+
+const productFinalPrice = document.querySelector('.product__final-price')
 
 // MENU FUNCTIONS (MOBILE)
 const openMenu = () => {
@@ -28,6 +40,17 @@ const subtractQuantity = () => {
 		quantityInput.value--
 	}
 }
+//Add to Cart
+const addToCart = () => {
+	const quantity = quantityInput.value
+	productQuantity.forEach(e => {
+		e.textContent = quantity
+	})
+	productFinalPrice.textContent = `$${(price * quantity).toFixed(2)}`
+}
+const toggleBasket = () => {
+	cartMenu.classList.toggle('open')
+}
 
 // SLICK
 $(document).ready(function () {
@@ -45,3 +68,6 @@ closeBtn.addEventListener('click', closeMenu)
 
 addQuantityBtn.addEventListener('click', addQuantity)
 subtractQuantityBtn.addEventListener('click', subtractQuantity)
+basketIcon.addEventListener('click', toggleBasket)
+
+addToCartBtn.addEventListener('click', addToCart)

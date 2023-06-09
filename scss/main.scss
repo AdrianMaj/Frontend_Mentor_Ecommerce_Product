@@ -8,7 +8,7 @@ $secondary: #fde0c9;
 html {
 	font-size: 10px;
 }
-button{
+button {
 	border: none;
 	background: none;
 }
@@ -22,7 +22,7 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 0.8em 1.2em 1.2em 1.2em;
+	padding: 0.6em 1em 1em 1em;
 	&__logo {
 		margin-left: 0.2em;
 		padding: 0.5em;
@@ -30,15 +30,16 @@ body {
 	&__avatar {
 		margin-left: 0.5em;
 		padding: 0.5em;
-		
+
 		:focus {
 			border: 1px solid $main;
 		}
-		img{
+		img {
 			width: 2.5em;
 		}
 	}
 	&__cart-icon {
+		position: relative;
 		padding: 0.5em;
 		margin-left: auto;
 	}
@@ -51,6 +52,17 @@ body {
 	&__hamburger {
 		margin-top: 0.5em;
 		padding: 0.5em;
+	}
+	&__item-quantity {
+		position: absolute;
+		top: 8%;
+		right: 8%;
+		background-color: $main;
+		color: white;
+		font-size: 1rem;
+		padding: 0 0.5em;
+		width: 1.8em;
+		border-radius: 30%/50%;
 	}
 }
 .menu {
@@ -103,14 +115,21 @@ body {
 	position: relative;
 	.slick-list {
 		width: 100%;
-		height: 37.5vh;
+		height: 45vh;
+	}
+	.slick-track {
+		height: 45vh;
+	}
+	img {
+		object-fit: cover;
+		object-position: center top;
 	}
 }
 .slick-arrow {
 	position: absolute;
 	background-color: #fff;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	border: none;
 	cursor: pointer;
@@ -155,8 +174,10 @@ body {
 		margin-bottom: 0.8em;
 	}
 	&__description {
-		color: #4b4a4a;
+		color: #808080;
 		margin-bottom: 1em;
+		font-weight: 500;
+		line-height: 1.5em;
 	}
 	&__price {
 		font-weight: bold;
@@ -177,21 +198,24 @@ body {
 		text-decoration: line-through;
 	}
 	&__add-to-cart-btn {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 1.2em;
-		border-radius: 8px;
-		border: none;
-		background-color: $main;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 1.6rem;
-		color: #fff;
-		font-weight: 600;
 		svg {
 			margin-right: 1em;
 		}
 	}
+}
+.orange-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.2em;
+	border-radius: 8px;
+	border: none;
+	width: 100%;
+	background-color: $main;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+	color: #fff;
+	font-weight: 600;
 }
 .pricing {
 	display: flex;
@@ -223,19 +247,74 @@ body {
 		font-weight: 600;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 1.6rem;
-		width: 20%;
+		width: 25%;
 		border: none;
 		background: none;
 		text-align: center;
 		padding: 1em;
 	}
 }
+
+//CART
+.cart {
+	position: absolute;
+	display: none;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%, 0);
+	z-index: 2;
+	background-color: #fff;
+	border-radius: 8px;
+	width: 95%;
+	&__heading {
+		font-size: 1.4rem;
+		padding: 1.3em;
+		border-bottom: 1px solid rgb(206, 204, 204);
+	}
+	&__content {
+		padding: 1.3em;
+	}
+}
+.product {
+	display: flex;
+	margin-bottom: 1.5em;
+	&__image {
+		width: 17.5%;
+		height: 17.5%;
+		border-radius: 6px;
+	}
+	&__description {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		margin-left: 0.7em;
+		color: #808080;
+		line-height: 1.5em;
+		word-spacing: -1.5px;
+	}
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+	&__delete {
+		margin-left: auto;
+	}
+	&__final-price {
+		color: black;
+		font-weight: bold;
+	}
+}
+
 .active {
 	left: 0;
+}
+.open {
+	display: block;
 }
 .attribution {
 	font-size: 11px;
 	text-align: center;
+	margin-bottom: 1em;
 }
 
 .attribution a {
