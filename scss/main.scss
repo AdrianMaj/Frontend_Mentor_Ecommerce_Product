@@ -216,6 +216,7 @@ body {
 	font-size: 1.6rem;
 	color: #fff;
 	font-weight: 600;
+	cursor: pointer;
 }
 .pricing {
 	display: flex;
@@ -274,9 +275,18 @@ body {
 	&__content {
 		padding: 1.3em;
 	}
+	&__checkout{
+		display: none;
+	}
+	&__empty{
+		text-align: center;
+		padding: 4em;
+		font-weight: bold;
+		color: #444444;
+	}
 }
 .product {
-	display: flex;
+	display: none;
 	margin-bottom: 1.5em;
 	&__image {
 		width: 17.5%;
@@ -298,6 +308,8 @@ body {
 	}
 	&__delete {
 		margin-left: auto;
+		padding: 0.5em 0 0.5em 0.5em;
+		z-index: 3;
 	}
 	&__final-price {
 		color: black;

@@ -14,6 +14,11 @@ const quantityInput = document.querySelector('.quantity__number')
 //basket and addToCart consts
 const basketIcon = document.querySelector('.header__cart-icon')
 const cartMenu = document.querySelector('.cart')
+const cartProduct = document.querySelector('.product')
+const cartCheckoutBtn = document.querySelector('.cart__checkout')
+const cartEmpty = document.querySelector('.cart__empty')
+const productDeleteBtn = document.querySelector('.product__delete')
+const cartColour = document.querySelector('.cart__colour')
 
 const addToCartBtn = document.querySelector('.info__add-to-cart-btn')
 const productQuantity = document.querySelectorAll('.product__quantity')
@@ -44,12 +49,31 @@ const subtractQuantity = () => {
 const addToCart = () => {
 	const quantity = quantityInput.value
 	productQuantity.forEach(e => {
-		e.textContent = quantity
+		if (quantity > 0) {
+			e.textContent = quantity
+			cartProduct.style.display = 'flex'
+			cartCheckoutBtn.style.display = 'block'
+			cartEmpty.style.display = 'none'
+		} else if (quantity == 0) {
+			e.style.display = 'none'
+			cartProduct.style.display = 'none'
+			cartCheckoutBtn.style.display = 'none'
+			cartEmpty.style.display = 'block'
+		}
 	})
 	productFinalPrice.textContent = `$${(price * quantity).toFixed(2)}`
 }
+const clearBasket = () => {
+	quantityInput.value = 0
+	addToCart()
+}
 const toggleBasket = () => {
 	cartMenu.classList.toggle('open')
+	if (cartColour.getAttribute('fill') === 'black') {
+		cartColour.setAttribute('fill', '#69707D')
+	} else {
+		cartColour.setAttribute('fill', 'black')
+	}
 }
 
 // SLICK
@@ -69,5 +93,6 @@ closeBtn.addEventListener('click', closeMenu)
 addQuantityBtn.addEventListener('click', addQuantity)
 subtractQuantityBtn.addEventListener('click', subtractQuantity)
 basketIcon.addEventListener('click', toggleBasket)
+productDeleteBtn.addEventListener('click', clearBasket)
 
 addToCartBtn.addEventListener('click', addToCart)
