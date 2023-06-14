@@ -275,10 +275,10 @@ body {
 	&__content {
 		padding: 1.3em;
 	}
-	&__checkout{
+	&__checkout {
 		display: none;
 	}
-	&__empty{
+	&__empty {
 		text-align: center;
 		padding: 4em;
 		font-weight: bold;
@@ -331,4 +331,68 @@ body {
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 992px) {
+	.header {
+		padding: 0 8em;
+		&__hamburger {
+			display: none;
+		}
+		&__cart-icon {
+			margin-right: 2em;
+		}
+		&__avatar {
+			img {
+				width: 3em;
+			}
+		}
+		border-bottom: 1px solid #b1afaf;
+	}
+	.menu {
+		left: 0;
+		background: none;
+		height: auto;
+		width: auto;
+		position: static;
+		margin-left: 2em;
+		.nav {
+			height: auto;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: flex-start;
+			background: none;
+			width: 100%;
+			&__list {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: row;
+			}
+			&__list-element {
+				margin-bottom: 0.5em;
+				padding: 1em;
+				padding-right: 3em;
+				font-weight: 500;
+				font-size: 1.4rem;
+				a {
+					position: relative;
+					color: #808080;
+				}
+				a:hover::before {
+					position: absolute;
+					top: 340%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					content: '';
+					background-color: $main;
+					width: 100%;
+					height: 5px;
+				}
+			}
+			&__close-btn {
+				display: none;
+			}
+		}
+	}
 }
