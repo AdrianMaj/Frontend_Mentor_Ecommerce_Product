@@ -31,9 +31,9 @@
       </nav>
     </section>
     <button class="header__cart-icon"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-      <path class="cart__colour"
-      d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-      fill="#69707D" fill-rule="nonzero" />
+        <path class="cart__colour"
+          d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+          fill="#69707D" fill-rule="nonzero" />
       </svg>
       <p class="header__item-quantity"> <span class="product__quantity"></span></p>
     </button>
@@ -68,37 +68,51 @@
       <button class="cart__checkout orange-btn">Checkout</button>
     </div>
   </div>
-  <section class="gallery">
-    <img src="./img/image-product-1.jpg" alt="First image of shoes" class="gallery__photo">
-    <img src="./img/image-product-2.jpg" alt="Second image of shoes" class="gallery__photo">
-    <img src="./img/image-product-3.jpg" alt="Third image of shoes" class="gallery__photo">
-    <img src="./img/image-product-4.jpg" alt="Fourth image of shoes" class="gallery__photo">
-  </section>
-  <section class="info">
-    <h3 class="info__company-name">Sneaker Company</h3>
-    <h2 class="info__title">Fall Limited Edition Sneakers</h2>
-    <p class="info__description">These low-profile sneakers are your perfect casual wear companion. Featuring a
-      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-    <div class="pricing">
-      <p class="info__price">$125.00</p>
-      <p class="info__discount">50%</p>
-      <p class="info__old-price">$250.00</p>
+  <div class="content">
+    <div class="galleries">
+      <section class="gallery">
+        <img src="./img/image-product-1.jpg" alt="First image of shoes" class="gallery__photo">
+        <img src="./img/image-product-2.jpg" alt="Second image of shoes" class="gallery__photo">
+        <img src="./img/image-product-3.jpg" alt="Third image of shoes" class="gallery__photo">
+        <img src="./img/image-product-4.jpg" alt="Fourth image of shoes" class="gallery__photo">
+      </section>
+      <section class="gallery-desktop">
+        <img src="./img/image-product-1-thumbnail.jpg" alt="First image of shoes" class="gallery__thumbnail">
+        <img src="./img/image-product-2-thumbnail.jpg" alt="Second image of shoes" class="gallery__thumbnail">
+        <img src="./img/image-product-3-thumbnail.jpg" alt="Third image of shoes" class="gallery__thumbnail">
+        <img src="./img/image-product-4-thumbnail.jpg" alt="Fourth image of shoes" class="gallery__thumbnail">
+      </section>
     </div>
-    <div class="quantity">
-      <button class="quantity__btn quantity__btn--subtract"><img src="./img/icon-minus.svg"
-          alt="Subtract product icon"></button>
-      <input type="number" min="0 " max="999" value="0" class="quantity__number"></input>
-      <button class="quantity__btn quantity__btn--add"><img src="./img/icon-plus.svg"
-          alt="Add more products icon"></button>
-    </div>
-    <button class="info__add-to-cart-btn orange-btn"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-          fill="#ffffff" fill-rule="nonzero" />
-      </svg>
-      <p>Add to cart</p>
-    </button>
-  </section>
+    <section class="info">
+      <h3 class="info__company-name">Sneaker Company</h3>
+      <h2 class="info__title">Fall Limited Edition Sneakers</h2>
+      <p class="info__description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="pricing">
+        <div class="pricing__container">
+          <p class="info__price">$125.00</p>
+          <p class="info__discount">50%</p>
+        </div>
+        <p class="info__old-price">$250.00</p>
+      </div>
+      <div class="info__buy-container">
+        <div class="quantity">
+          <button class="quantity__btn quantity__btn--subtract"><img src="./img/icon-minus.svg"
+              alt="Subtract product icon"></button>
+          <input type="number" min="0 " max="999" value="0" class="quantity__number"></input>
+          <button class="quantity__btn quantity__btn--add"><img src="./img/icon-plus.svg"
+              alt="Add more products icon"></button>
+        </div>
+        <button class="info__add-to-cart-btn orange-btn"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#ffffff" fill-rule="nonzero" />
+          </svg>
+          <p>Add to cart</p>
+        </button>
+      </div>
+    </section>
+  </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
