@@ -325,6 +325,7 @@ body {
 		margin-left: auto;
 		padding: 0.5em 0 0.5em 0.5em;
 		z-index: 3;
+		cursor: pointer;
 	}
 	&__final-price {
 		color: black;
@@ -350,7 +351,7 @@ body {
 
 @media (min-width: 992px) {
 	.header {
-		overflow: hidden;
+		// overflow: hidden;
 		height: 130px;
 		position: relative;
 		padding: 0 10em;
@@ -359,11 +360,18 @@ body {
 			display: none;
 		}
 		&__cart-icon {
-			margin-right: 2em;
+			margin-right: 3em;
+			position: relative;
 		}
 		&__avatar {
 			img {
-				width: 3em;
+				width: 3.5em;
+				border: 2px solid transparent;
+				transition: border 0.3s;
+				border-radius: 50%;
+				&:hover {
+					border: 2px solid $main;
+				}
 			}
 		}
 	}
@@ -408,14 +416,19 @@ body {
 					color: #808080;
 				}
 				a:hover::before {
-					position: absolute;
-					bottom: -325%;
-					left: 50%;
-					transform: translate(-50%, -50%);
+					opacity: 1;
+				}
+				a::before {
 					content: '';
-					background-color: $main;
+					position: absolute;
+					left: 50%;
+					bottom: -325%;
+					transform: translate(-50%, -50%);
 					width: 100%;
 					height: 5px;
+					opacity: 0;
+					background-color: $main;
+					transition: opacity 0.3s;
 				}
 			}
 			&__close-btn {
@@ -437,7 +450,7 @@ body {
 		width: 80%;
 		height: 80%;
 		position: relative;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 		.slick-list {
 			border-radius: 16px;
 			width: 100%;
@@ -453,11 +466,29 @@ body {
 	}
 	.gallery-desktop {
 		display: flex;
-		justify-content: space-between;
-		width: 80%;
+		justify-content: center;
+		width: 100%;
 		img {
 			border-radius: 16px;
-			width: 20%;
+			width: 100%;
+		}
+		&__thumbnail {
+			margin: 1em;
+			transition: opacity 0.3s;
+			cursor: pointer;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+		.slick-track {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+		}
+		.slick-current {
+			opacity: 0.4;
+			border: 2px solid $main;
 		}
 	}
 	.slick-arrow {
@@ -469,7 +500,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		padding: 0 8.5em;
-		margin-bottom: 5em;
+		margin-bottom: 4em;
 	}
 	.info {
 		padding-right: 16em;
@@ -504,10 +535,29 @@ body {
 	.quantity {
 		margin-right: 1em;
 		width: 50%;
+		&__btn {
+			svg use {
+				transition: fill 0.3s;
+			}
+			&:hover {
+				svg use {
+					fill: #fdab6b;
+				}
+			}
+		}
 	}
-	.cart{
-		right: 0;
+	.orange-btn {
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: #fdab6b;
+		}
+	}
+	.cart {
+		position: fixed;
+		margin-top: 7em;
+		margin-left: 35.5%;
+		top: 0;
 		width: 20%;
-		transform: translate(31em);
 	}
+
 }

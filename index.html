@@ -77,10 +77,14 @@
         <img src="./img/image-product-4.jpg" alt="Fourth image of shoes" class="gallery__photo">
       </section>
       <section class="gallery-desktop">
-        <img src="./img/image-product-1-thumbnail.jpg" alt="First image of shoes" class="gallery__thumbnail">
-        <img src="./img/image-product-2-thumbnail.jpg" alt="Second image of shoes" class="gallery__thumbnail">
-        <img src="./img/image-product-3-thumbnail.jpg" alt="Third image of shoes" class="gallery__thumbnail">
-        <img src="./img/image-product-4-thumbnail.jpg" alt="Fourth image of shoes" class="gallery__thumbnail">
+        <img src="./img/image-product-1-thumbnail.jpg" data-slick-index="1" alt="First image of shoes"
+          class="gallery-desktop__thumbnail">
+        <img src="./img/image-product-2-thumbnail.jpg" data-slick-index="2" alt="Second image of shoes"
+          class="gallery-desktop__thumbnail">
+        <img src="./img/image-product-3-thumbnail.jpg" data-slick-index="3" alt="Third image of shoes"
+          class="gallery-desktop__thumbnail">
+        <img src="./img/image-product-4-thumbnail.jpg" data-slick-index="4" alt="Fourth image of shoes"
+          class="gallery-desktop__thumbnail">
       </section>
     </div>
     <section class="info">
@@ -97,11 +101,25 @@
       </div>
       <div class="info__buy-container">
         <div class="quantity">
-          <button class="quantity__btn quantity__btn--subtract"><img src="./img/icon-minus.svg"
-              alt="Subtract product icon"></button>
+          <button class="quantity__btn quantity__btn--subtract"><svg width="12" height="4"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <path
+                  d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                  id="a" />
+              </defs>
+              <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+            </svg></button>
           <input type="number" min="0 " max="999" value="0" class="quantity__number"></input>
-          <button class="quantity__btn quantity__btn--add"><img src="./img/icon-plus.svg"
-              alt="Add more products icon"></button>
+          <button class="quantity__btn quantity__btn--add"><svg width="12" height="12"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <path
+                  d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                  id="b" />
+              </defs>
+              <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+            </svg></button>
         </div>
         <button class="info__add-to-cart-btn orange-btn"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
             <path

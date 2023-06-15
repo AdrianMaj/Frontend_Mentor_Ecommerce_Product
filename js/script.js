@@ -24,6 +24,9 @@ const addToCartBtn = document.querySelector('.info__add-to-cart-btn')
 const productQuantity = document.querySelectorAll('.product__quantity')
 
 const productFinalPrice = document.querySelector('.product__final-price')
+//gallery
+const photos = document.querySelectorAll('.gallery__photo')
+const thumbnails = document.querySelectorAll('.gallery-desktop__thumbnail')
 
 // MENU FUNCTIONS (MOBILE)
 const openMenu = () => {
@@ -83,6 +86,14 @@ $(document).ready(function () {
 			'<button type="button" class="slick-prev"><img src="./img/icon-previous.svg" alt="Previous photo arrow button"></button>',
 		nextArrow:
 			'<button type="button" class="slick-next"><img src="./img/icon-next.svg" alt="Next photo arrow button"></button>',
+	})
+	$('.gallery-desktop').slick({
+		slidesToShow: 4,
+		slidesToScroll: 0,
+		asNavFor: '.gallery',
+		dots: false,
+		centerMode: true,
+		focusOnSelect: true,
 	})
 })
 
