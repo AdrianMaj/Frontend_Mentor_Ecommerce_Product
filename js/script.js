@@ -27,6 +27,8 @@ const productFinalPrice = document.querySelector('.product__final-price')
 //gallery
 const photos = document.querySelectorAll('.gallery__photo')
 const thumbnails = document.querySelectorAll('.gallery-desktop__thumbnail')
+const lightbox = document.querySelector('.lightbox')
+const lightboxCloseBtn = document.querySelector('.lightbox__close-btn')
 
 // MENU FUNCTIONS (MOBILE)
 const openMenu = () => {
@@ -78,14 +80,25 @@ const toggleBasket = () => {
 		cartColour.setAttribute('fill', 'black')
 	}
 }
+const showLightbox = () => {
+	if (window.matchMedia('(min-width: 992px)').matches) {
+		lightbox.style.display = 'block'
+	}
+}
+const hideLightbox = () => {
+	if (window.matchMedia('(min-width: 992px)').matches) {
+		lightbox.style.display = 'none'
+	}
+}
 
 // SLICK
 $(document).ready(function () {
 	$('.gallery').slick({
 		prevArrow:
-			'<button type="button" class="slick-prev"><img src="./img/icon-previous.svg" alt="Previous photo arrow button"></button>',
+			'<button type="button" class="slick-prev"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>',
 		nextArrow:
-			'<button type="button" class="slick-next"><img src="./img/icon-next.svg" alt="Next photo arrow button"></button>',
+			'<button type="button" class="slick-next"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>',
+		// swipe: false,
 	})
 	$('.gallery-desktop').slick({
 		slidesToShow: 4,
@@ -98,6 +111,10 @@ $(document).ready(function () {
 })
 
 //LISTENERS
+photos.forEach(photo => {
+	photo.addEventListener('click', showLightbox)
+})
+lightboxCloseBtn.addEventListener('click', hideLightbox)
 hamburgerBtn.addEventListener('click', openMenu)
 closeBtn.addEventListener('click', closeMenu)
 

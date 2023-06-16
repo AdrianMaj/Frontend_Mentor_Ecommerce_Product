@@ -134,6 +134,7 @@ body {
      object-fit: cover;
   -o-object-position: center top;
      object-position: center top;
+  cursor: pointer;
 }
 
 .gallery-desktop {
@@ -149,7 +150,7 @@ body {
   border: none;
   cursor: pointer;
 }
-.slick-arrow img {
+.slick-arrow svg {
   position: absolute;
   width: 25%;
   top: 50%;
@@ -162,7 +163,7 @@ body {
   transform: translate(0, -50%);
   z-index: 1;
 }
-.slick-prev img {
+.slick-prev svg {
   left: 47%;
 }
 
@@ -173,7 +174,7 @@ body {
   margin-right: 1em;
   z-index: 1;
 }
-.slick-next img {
+.slick-next svg {
   left: 53%;
 }
 
@@ -484,7 +485,7 @@ body {
     width: 100%;
   }
   .gallery-desktop img {
-    border-radius: 16px;
+    border-radius: 1em;
     width: 100%;
   }
   .gallery-desktop__thumbnail {
@@ -517,7 +518,7 @@ body {
     margin-bottom: 4em;
   }
   .info {
-    padding-right: 16em;
+    padding-right: 10em;
   }
   .info__title {
     font-size: 4rem;
@@ -548,7 +549,7 @@ body {
   }
   .quantity {
     margin-right: 1em;
-    width: 50%;
+    width: 300px;
   }
   .quantity__btn svg use {
     transition: fill 0.3s;
@@ -568,5 +569,63 @@ body {
     margin-left: 35.5%;
     top: 0;
     width: 20%;
+  }
+  .lightbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .lightbox__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.664);
+    z-index: 8;
+  }
+  .lightbox__galleries {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    z-index: 10;
+  }
+  .lightbox__galleries .slick-arrow {
+    visibility: visible;
+  }
+  .lightbox__galleries .slick-prev {
+    margin-left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .lightbox__galleries .slick-next {
+    margin-right: 0;
+    transform: translate(50%, -50%);
+  }
+  .lightbox__gallery {
+    height: 40em;
+    width: 40em;
+  }
+  .lightbox__gallery-desktop {
+    width: 90%;
+  }
+  .lightbox__close-btn {
+    padding: 0.5em;
+    margin: 1em;
+    margin-left: 1.2em;
+    position: absolute;
+    top: 10%;
+    left: 64.5%;
+    transform: scale(1.4);
+    z-index: 10;
+    cursor: pointer;
+  }
+  .lightbox__close-btn svg path {
+    fill: #ff7d1b;
   }
 }/*# sourceMappingURL=main.css.map */
