@@ -80,16 +80,6 @@ const toggleBasket = () => {
 		cartColour.setAttribute('fill', 'black')
 	}
 }
-const showLightbox = () => {
-	if (window.matchMedia('(min-width: 992px)').matches) {
-		lightbox.style.display = 'block'
-	}
-}
-const hideLightbox = () => {
-	if (window.matchMedia('(min-width: 992px)').matches) {
-		lightbox.style.display = 'none'
-	}
-}
 
 // SLICK
 $(document).ready(function () {
@@ -111,10 +101,6 @@ $(document).ready(function () {
 })
 
 //LISTENERS
-photos.forEach(photo => {
-	photo.addEventListener('click', showLightbox)
-})
-lightboxCloseBtn.addEventListener('click', hideLightbox)
 hamburgerBtn.addEventListener('click', openMenu)
 closeBtn.addEventListener('click', closeMenu)
 
